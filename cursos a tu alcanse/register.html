@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos a tu Alcance - Crear una cuenta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5e3e3, #d3e0ea);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('image/background.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .nav-right {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #003366;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f0f0f5;
+            color: #003366;
+        }
+        .signup-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #003366;
+        }
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .phone-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .flag {
+            width: 30px;
+            height: 20px;
+            margin-right: 10px;
+            margin-left: 5px;
+        }
+        .phone-input input {
+            border: none;
+            flex-grow: 1;
+        }
+        .social-login {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-btn {
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        .terminos-uso {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 90px;
+                    padding-top: 5px;
+                    grid-column: 1 / -1;
+                }
+                .terminos-uso input {
+                    margin-left: -30px;
+                    margin-right: -90px;
+                }
+        .btn-submit {
+            grid-column: 1 / -1;
+            width: 70%;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-right {
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+        @media (max-width: 500px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            .btn {
+                width: 100%;
+            }
+            .nav-right {
+                align-items: center;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo" style="max-width: 100%;">
+                </div>
+                <div class="brand">Cursos a tu Alcance</div>
+            </div>
+            <div class="nav-right">
+                <button  class="btn btn-secondary" >Acceso</button>
+                <button class="btn btn-primary">Inicio</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="signup-form">
+            <span class="close-btn">&times;</span>
+            <h2>Crear una cuenta</h2>
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <div class="phone-input">
+                    <img class="flag" src="image/Bolivia.png" alt="Country flag">
+                    <input type="tel" placeholder="Número de teléfono" required>
+                </div>
+                <select id="country" required>
+                    <option value="">Seleccionar país</option>
+                </select>
+                <select id="language" required>
+                    <option value="">Seleccionar idioma</option>
+                </select>
+
+
+                
+                <div class="terminos-uso">   
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Acepto los términos de servicio y la política de privacidad</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Crear cuenta</button>
+                <div class="social-login full-width">
+                    <!-- <button class="social-btn">
+                        <img src="/google_logo.png" alt="Google">
+                        Continuar con Google
+                    </button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+

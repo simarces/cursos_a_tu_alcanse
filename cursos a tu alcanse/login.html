@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajero Express - Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .background {
+            background-image: url('image/login.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .brand-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .btn-register {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .links {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .links a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 15px;
+            }
+            .navbar {
+                height: auto;
+            }
+            .nav-left {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .btn-register {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            .login-container {
+                margin: 0 auto;
+                padding: 1.5rem;
+                max-width: 90%;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            input {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+            button[type="submit"] {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+            .links a {
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .nav-left {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btn-register {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <img src="/image/logo.png" alt="Viajero Express Logo" class="logo">
+                    <span class="brand-name">Cursos a tu Alcanse</span>
+                </div>
+                <button class="btn-register">Inscribirse</button>
+            </div>
+        </nav>
+        <div class="login-container">
+            <button class="close-btn">&times;</button>
+            <h2>Bienvenido de nuevo</h2>
+            <p class="login-ingrese">Ingrese a su cuenta</p>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Acceso</button>
+            </form>
+            <div class="links">
+                <a href="#">¿Perdiste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

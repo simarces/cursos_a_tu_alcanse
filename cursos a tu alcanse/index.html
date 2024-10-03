@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajero Express</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image/background.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 20px ;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 25px;
+            height: 25px;
+            margin-left: 8px;
+            margin-right: 10px;
+        }
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .nav-right {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #003366;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f0f0f5;
+            color: #003366;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 190px;
+        }
+        .hero-content {
+            margin-top: -80px; /* Ajusta este valor para mover el contenido hacia arriba */
+        }
+        .titulo-hero {
+            font-size: 35px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .contenido-titulo-hero {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.5;
+        }
+        .features {
+            display: flex;            
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        .feature-card {
+            flex: 1;
+            max-width: 240px; /* Establece un ancho máximo para las tarjetas */
+            background-color: white;
+            padding: 13px; /* Reduce el padding */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        .feature-icon {
+            width: 25px; /* Reduce el tamaño del icono */
+            height: 25px;
+            margin-right: 10px;
+            margin-bottom: 40px;
+        }
+        .titulo-card {
+            font-size: 14px;
+        }
+        .contenido-card {
+            font-size: 13px;
+        }
+        .pregunta {
+            margin-left: 190px; /* Añade margen a la derecha */
+        }
+        .boton-text-inferior {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-right {
+                margin-top: 10px;
+            }
+            .hero {
+                flex-direction: column;
+                margin: 20px 0; /* Ajusta el margen para móviles */
+            }
+            .hero-content {
+                text-align: center; /* Centra el texto en móviles */
+                margin-top: 0;
+            }
+            .hero-image img {
+                width: 100%; /* Imagen se adapta al 100% del contenedor en móviles */
+                height: auto;
+            }
+            .features {
+                flex-direction: column;
+                gap: 20px; /* Reduce el espacio entre las tarjetas en móviles */
+            }
+            .pregunta {
+                margin-left: 0;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo" style="max-width: 100%;">
+                </div>
+                <div class="brand">Cursos a tu Alcance</div>
+            </div>
+            <div class="nav-right">
+                <button class="btn btn-secondary">Acceso</button>
+                <button class="btn btn-primary">Inscribirse</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <main>
+            <section class="hero">
+                <div class="hero-image">
+                    <img src="image/profe.png" alt="Viajero con mochila" style="width: 350px; height: auto;">
+                </div>
+                <div class="hero-content">
+                    <h1 class="titulo-hero">Conectar con <br> Cursos a nivel <br> Mundial</h1>
+                    <p class="contenido-titulo-hero">Encuentra un instructor que te brinde cursos especializados desde cualquier parte del mundo o conviértete en uno para enseñar mientras exploras nuevos destinos.</p>
+                </div>
+            </section>
+            <div class="pregunta">
+                <h2>¿Por qué elegir Cursos a tu Alcance?</h2>
+                <p>Descubra las ventajas únicas de nuestra plataforma de conexión de cursos impulsada por la comunidad.</p>
+                <section class="features">
+                    <div class="feature-card">
+                        <img src="image/bolsa.png" alt="Transacciones seguras" class="feature-icon">
+                        <div>
+                            <div class="titulo-card"> 
+                                <h3>cursos seguros</h3>
+                            </div>
+                            <div class="contenido-card">
+                                <p>Garantice cursos seguros con docentes expertos en la materia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <img src="image/mundo.png" alt="Comunidad global" class="feature-icon">
+                        <div>
+                            <div class="titulo-card">
+                                <h3>Comunidad global</h3>
+                            </div>
+                            <div class="contenido-card">
+                                <p>Conéctate con personas de cualquier parte del mundo para mejorar tu conocimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <img src="image/viaja.png" alt="Viaja y gana" class="feature-icon">
+                        <div>
+                            <div class="titulo-card">
+                                <h3>Estudia y aprende</h3>
+                            </div>
+                            <div class="contenido-card">
+                                <p>¡Aprovecha tus cursos y convierte tu pasión en una abilidad adicional!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          
+        </main>
+    </div>
+    <!-- Aqui esta el boton de borrar comentario -->
+    <button id="clearStorageBtn" class="btn btn-secondary">Borrar Todos los Datos</button>
+    <script>document.getElementById('clearStorageBtn').addEventListener('click', () => {
+        if (confirm('¿Estás seguro de que deseas borrar todos los datos?')) {
+            localStorage.clear();
+            alert('Todos los datos han sido borrados.');
+        }
+    });
+    </script>
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Placeholder for button click actions
+                console.log('Button clicked:', this.textContent);
+                // Redirection logic
+                if (this.textContent === 'Acceso') {
+                    window.location.href = '/login.html'; // Cambia esta ruta por la deseada
+                } else if (this.textContent === 'Inscribirse') {
+                    window.location.href = '/register.html'; // Cambia esta ruta por la deseada
+                } else if (this.textContent === 'Iniciar') {
+                    window.location.href = '/entrada.html'; // Cambia esta ruta por la deseada
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

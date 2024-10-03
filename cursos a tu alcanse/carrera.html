@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Estilo general para el navbar */
+        .navbar {
+            display: flex;
+            justify-content: center; /* Centra el título horizontalmente */
+            align-items: center; /* Alinea verticalmente */
+            background-color: #0467cb; /* Fondo azul */
+            padding: 20px;
+        }
+
+        /* Estilo para el título en el navbar */
+        .navbar h1 {
+            color: white;
+            margin: 0; /* Elimina márgenes alrededor del título */
+            font-size: 30px;
+        }
+
+        /* Estilo general para el body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 70vh; /* Asegura que el body ocupe al menos el 80% del viewport */
+            background-color: #f0f0f0;
+            margin: 0;
+            gap: 20px; /* Espacio entre las tarjetas */
+        }
+
+        /* Estilo para las tarjetas */
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 50px;
+            background-color: white; /* Fondo blanco para la tarjeta */
+            border: 1px solid #ddd; /* Borde sutil */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            transition: transform 0.2s; /* Transición para el hover */
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para el texto dentro de la tarjeta */
+        .card h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333; /* Color del texto */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar con el título centrado -->
+    <div class="navbar">
+        <h1>Elige tu carrera</h1>
+    </div>
+
+    <!-- Tarjetas de carreras en el body -->
+    <div class="card">
+        <h2>Facultad de Tecnología</h2>
+    </div>
+    <div class="card">
+        <h2>Facultad de Derecho</h2>
+    </div>
+    <div class="card">
+        <h2>Facultad de Medicina</h2>
+    </div>
+    <div class="card">
+        <h2>Facultad de Arquitectura</h2>
+    </div>
+
+</body>
+</html>
